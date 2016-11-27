@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<classPathEntry location="/Users/liuzhaowei/IdeaProjects/cal/cal-service/cal-service-data/libs/mysql-connector-java-5.1.18-bin.jar" />
+
+	<context id="context1" targetRuntime="MyBatis3">
+		<property name="beginningDelimiter" value=""/>
+		<property name="endingDelimiter" value=""/>
+	
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin>  
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" /> 
+		</commentGenerator>
+		
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://10.0.1.42:3306/crbp?useUnicode=true&amp;characterEncoding=UTF-8"
+            userId="root" password="root" /> 
+        <javaModelGenerator targetPackage="com.team.soinve.data.po" targetProject="/Users/liuzhaowei/IdeaProjects/cal/cal-service/cal-service-data/src/main/java" />
+        
+        <sqlMapGenerator targetPackage="com.team.soinve.data.mapper" targetProject="/Users/liuzhaowei/IdeaProjects/cal/cal-service/cal-service-data/src/main/java" />
+        
+        <javaClientGenerator targetPackage="com.team.soinve.data.dao" targetProject="/Users/liuzhaowei/IdeaProjects/cal/cal-service/cal-service-data/src/main/java" type="XMLMAPPER" />
+
+		<table tableName="sys_privilege"  domainObjectName="Privilege" schema="" ></table>
+    </context>
+	    
+</generatorConfiguration>
